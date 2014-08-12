@@ -1,0 +1,31 @@
+<div>
+  <p>Create a new account.</p>
+
+  <form>
+    <p>
+      <label>Your email:
+        <input type="email" ng-model="userEmail">
+      </label>
+    </p>
+
+    <p>
+      <label>Choose a password:
+        <input type="password" ng-model="userPassword">
+      </label>
+    </p>
+
+    <p>
+      <button ng-click="signup()">Sign-up</button>
+    </p>
+  </form>
+
+  <div ng-if="signupSuccess" style="color: green;">
+    <p>Your account has been successfully created.</p>
+
+    <p>You can now <a ui-sref="login">login</a>.</p>
+  </div>
+
+  <div ng-if="signupError" style="color: red;">
+    <p>An error occurred while trying to sign you up. Check console.</p>
+  </div>
+</div>

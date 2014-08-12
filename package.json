@@ -1,0 +1,19 @@
+{
+  "name": "parse-authentication-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msafi/parse-authentication-server.git"
+  },
+  "author": "",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/msafi/parse-authentication-server/issues"
+  },
+  "homepage": "https://github.com/msafi/parse-authentication-server"
+}

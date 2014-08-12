@@ -1,0 +1,35 @@
+<div ng-if="userIsLoggedIn === true">
+  <p>Welcome to the dashboard, friend!</p>
+
+  <hr>
+
+  <div>
+    <p>Click on apps to add to your account:</p>
+
+    <ul>
+      <li ng-repeat="app in apps"
+         class="clickable"
+         ng-click="addApp(app)">{{app.name}}</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div>
+    <p>Apps associated with your account:</p>
+
+    <ul>
+      <li ng-repeat="app in userApps()">
+        {{app.name}} <button ng-click="removeApp(app)">Remove</button>
+      </li>
+    </ul>
+
+    <p ng-if="userApps().length === 0 || userApps().length === undefined">None.</p>
+  </div>
+
+  <hr>
+
+  <div>
+    <p>When you are done, <a href="" ng-click="logout()">logout</a>.</p>
+  </div>
+</div>

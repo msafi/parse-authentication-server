@@ -1,0 +1,27 @@
+<div>
+  <p>Use this form to login:</p>
+
+  <form>
+    <p>
+      <label>Email:
+        <input type="email" ng-model="userEmail">
+      </label>
+    </p>
+
+    <p>
+      <label>Password:
+        <input type="password" ng-model="userPassword">
+      </label>
+    </p>
+
+    <p>
+      <button ng-click="login()" ng-disabled="loggingIn">Login</button> <span ng-if="loggingIn">Logging in...</span>
+    </p>
+  </form>
+
+  <div ng-if="loginError" style="color: red;">
+    <p>An error occurred while trying to log you in. Check console.</p>
+  </div>
+
+  <p>If you don't have an account, register <a ui-sref="signup">here</a>.</p>
+</div>
